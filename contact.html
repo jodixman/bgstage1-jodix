@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0d0d992eb4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="contact.css">
+    <title>Document</title>
+</head>
+
+<body class=" body1">
+
+    <nav class="header">
+        <div class="header_grp">
+            <div class="header_lft">
+                <image src="image/logoDmb.png" class="header_lft-img"/>
+                <a class="header_lft-h1" href="index.html">Home</a>
+                <p class="header_lft-p">My Project</p>
+            </div>
+    
+            <div class="flex justify-end">
+                <a href="/contact.html" class="header_left-a">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="section">
+        <form class="form1">
+            <h1 class="form1_h1">GET IN TOUCH</h1>    
+    
+            <div class="form_1-list">
+                <label class="form_1-lab">Name</label>
+                <input type="text" class="form_1-lab1" id="input-name"/>
+            </div>
+        
+            <div class="form_1-list">
+                <label class="form_1-lab">Email</label>
+                <input type="email" class="form_1-lab1" id="input-email"/>
+            </div>
+        
+            <div class="form_1-list">
+                <label class="form_1-lab">Phone Number</label>
+                <input type="text" class="form_1-lab1" id="input-number"/>
+            </div>
+        
+            <div class="form_1-list">
+                <label class="form_1-lab">Subject</label>
+                <select class="form_1-lab11" id="input-subject">
+                    <option value="">Select.....</option>
+                    <option value="frontend">Frontend Development</option>
+                    <option value="backend">Backend Development</option>
+                    <option value="fullstack">Fullstack Development</option>
+                </select>
+            </div>
+        
+            <div class="form_1-list ">
+                <label class="form_1-msg ">Your Message</label>
+                <textarea class="form_1-txt" id="input-message"></textarea>
+            </div>
+            
+            <div class="flex justify-end">
+                <button type="submit" onclick="submitData(event)">Contact Me</button>
+            </div>
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -97,21 +97,13 @@ function processProjects() {
                     ${projectAngular}
                     ${projectNode}
                 </div>
-
-                <p>
-                  ${hitungMundur(projectStart,projectEnd)}
-                </p>
                 <div class="card_btn1">
                     <button class="card_btn" >Edit</button>
                     <button class="card_btn" >Delet</button>
                 </div>
             </div>
         </a>
-    </div>
-
-        `
-   
-
+    </div>`
         // Lakukan sesuatu dengan nilai proyek, seperti mencetaknya ke tampilan atau melakukan operasi lain
         console.log("Project Name:", projectName);
         console.log("Project Description:", projectDesc);
@@ -128,94 +120,3 @@ let endDateInput = document.getElementById("input-project-enddate");
 startDateInput.addEventListener("change", function() {
   endDateInput.min = startDateInput.value;
 });
-
-
-
-
-
-
-
-//=========== WAKTU ===========
-const Waktu = (jodi) =>{ // jodi = new Date()
-  let date = new Date(jodi)
-
-  const listBulan = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agus","Sep","Oct","Nov","Dec"]
-
-  const menit = date.getMinutes()
-  const jam = date.getHours()
-  const tanggal = date.getDate()
-  const bulan = listBulan[date.getMonth()];
-  const tahun = date.getFullYear()
-
-  if(menit<10){
-    jam = "0" + jam
-  }
-  if(jam<10){
-    jam = "0" + jam
-  }
-
-
-  return`${tanggal} ${bulan} ${tahun} ${jam}:${menit} WIB`
-
-}
-
-  const ItungWaktu = (jodi) => {
-    let timeNow = new Date();
-    let timePost = jodi
-
-    let timeDistance = timeNow - timePost
-
-    const Milisecond = 1000
-    const detik = Milisecond * 60
-    const menit = detik * 60
-    const jam = menit * 60
-    const hari = jam * 24
-    const bulan = hari * 30
-    const tahun = bulan * 12
-
-    let Second = Math.floor(timeDistance / Milisecond) //itung perdetik 
-    let Minutes = Math.floor(timeDistance / detik) 
-    let Hours = Math.floor(timeDistance / jam) 
-    let Day = Math.floor(timeDistance / hari) 
-    let Month = Math.floor(timeDistance / bulan) 
-    let Year = Math.floor(timeDistance / tahun) 
-
-    if (Second >= 60) {
-      return `${Minutes} menit yang lalu`
-  } else if (Minutes >= 60) {
-      return `${Hours} jam yang lalu`
-  } else if (Hours >= 24) {
-      return `${Day} hari yang lalu`
-  } else if (Day >= 30) {
-      return `${Month} bulan yang lalu`
-  } else if (Month >= 12) {
-      return `${Year} tahun yang lalu`
-  }
-
-  let SetTim = {
-   Second
-  }
-
-    console.log(`${Second} Detik, ${Minutes} Menit`)
-    return SetTim.Second;
-  }
-
-
-  function hitungMundur(startDate, endDate) {
-    const start = new Date(startDate).getTime();
-    const end = new Date(endDate).getTime();
-  
-    // Menghitung selisih waktu antara startDate dan endDate
-    const selisih = end - start;
-  
-    // Menghitung hari, minggu, dan bulan
-    const hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
-    const minggu = Math.floor(hari / 7);
-    const bulan = Math.floor(hari / 30);
-  
-    return `Tinggal ${hari} Hari ${minggu} Minggu ${bulan} Bulan`;
-  }
-  
-
-  
-  

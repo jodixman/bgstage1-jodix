@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0d0d992eb4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/project.css">
+    <title>Document</title>
+</head>
+<body class="body1 dark-mode">
+
+        <nav class="header">
+            <div class="header_grp">
+                <div class="header_lft">
+                    <image src="image/logoDmb.png" class="header_lft-img"/>
+                    <a href="index.html" class="header_lft-h1">Home</a>
+                    <a href="project.html" class="header_lft-p">My Project</a>
+                </div>
+        
+                <div class="header_grp2">
+                    <span class="navbar-logo "><i class="fas fa-moon"></i></span>
+                    <a href="/contact.html" class="header_left-a">Contact Me</a>
+                </div>
+            </div>
+        </nav>
+        
+        
+        <!--MyProject START-->
+        <div class="pro">
+        <h1 class="pro_h1 r">ADD MY PROJECT</h1>
+        <form class="pro_form" onsubmit="ProjectSubmit(event)">
+            <div class="flex_col ">
+                <label class="pro_form_label r" for="input-porject-title">Project Name</label>
+                <input type="text" id="input-porject-title" class="pro_formName" autofocus/>
+            </div>
+        
+            <!--Date Start-->
+            <div class="pro_formDate">
+                <!--StartDate-->
+                <div class="flex_col ">
+                    <label for="input-project-startdate" class="pro_form_label r">Start Date</label>
+                    <input type="date" id="input-project-startdate" class="pro_form-input"/>
+                </div>
+                <!--EndDate-->
+                <div class="flex_col ">
+                    <label for="input-project-enddate" class="pro_form_label r">End Date</label>
+                    <input type="date" id="input-project-enddate" class="pro_form-input"/>
+                </div>
+            </div>
+            <!--Date END-->
+        
+            <!--Description Start-->
+            <div class="flex_col ">
+                <label for="input-description" class="pro_form_label  r">Description</label>
+                <textarea id="input-description" class="pro_fomr-textarea"></textarea>
+            </div>
+            <!--Description End-->
+        
+            <!--Tech Start-->
+            <div>
+                <h1 class="pro_form_label r">Technologi</h1>
+        
+                <div class="pro_form-tech">
+
+                        <div>
+                            <input type="checkbox" id="input-node" class="pro_form-techInp" />
+                            <label for="input-node" class="pro_form-tectLab r">Node Js</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="input-react" class="pro_form-techInp"/>
+                            <label for="input-react" class="pro_form-tectLab r">React Js</label>
+                        </div>
+        
+                        <div>
+                            <input type="checkbox" id="input-vue" class="pro_form-techInp"/>
+                            <label for="input-vue" class="pro_form-tectLab r">Vue Js</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="input-angular" class="pro_form-techInp"/>
+                            <label for="input-angular" class="pro_form-tectLab r">Angular</label>
+                        </div>
+                </div>
+            </div>
+            <!--Tech End-->
+        
+            <!--Uploud Start-->
+            <div >
+                <label for="input-blog-image" class="upld_lab r">Upload Image</label>
+                <div class="">
+                    <label for="input-blog-image">
+                        <div class="upld_card">
+                            <p class="upld_card-p">Attach File</p>
+                            <img src="image/file.png" alt="file" />
+                        </div>
+                    </label>
+                    <input type="file" id="input-blog-image" hidden />
+                </div>
+            </div>
+
+
+
+
+            <!--Uploud End-->
+            <div class="flex flex-row justify-end">
+                <button class="px-6 py-1 text-white bg-[#111626] rounded-full text-center hover:bg-white hover:text-black border border-black transition duration-500 my-5 text-lg font-bold hover:shadow-lg bt" >submit</button>
+            </div>
+        </form>
+        
+    </div>
+    <!--MyProject END-->
+
+
+    <!-- TESTER PROJECT -->
+    <div class=" cr crd">
+        <h1 class="crd_h1 r">MY PROJECT</h1>
+      
+        <div class="crd_grid">
+            <div class="crd_card" id="hid">
+                <a href="InProject.html">
+                    <div class="card_div">
+                        <div class="card_div1">
+                            <img src="image/photo.jpeg" alt="photo" class="card_div1-img">
+                        </div>
+                        <h1 class="card_h1">Dumbways Mobile App - 2021</h1>
+                        <p class="card_p1">12-2-2000 Sampai 12-2-200</p>
+                        <p class="card_p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla asperiores reprehenderit unde, adipisci fuga impedit vero doloremque praesentium rem amet.</p>
+                        <div class="card_ic">
+                            <i class="fa-brands fa-react card_ictx"></i>
+                            <i class="fa-brands fa-angular card_ictx"></i>
+                            <i class="fa-brands fa-vuejs card_ictx"></i>
+                            <i class="fa-brands fa-node-js card_ictx"></i>
+                        </div>
+            
+                        <div class="card_btn1">
+                            <button class="card_btn" >Edit</button>
+                            <button class="card_btn" >Delet</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <a href="InProject.html"><div class="crd_grid" id="test2"></div></a>
+    </div>
+
+    
+
+    <script src="js/project.js"></script>
+    <script src="js/darkmode.js"></script>
+</body>
+</html>

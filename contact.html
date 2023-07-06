@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/0d0d992eb4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="darkmode.css">
     <title>Document</title>
 </head>
 
-<body class=" body1">
+<body class="body1 dark-mode">
 
     <nav class="header">
         <div class="header_grp">
@@ -19,7 +20,8 @@
                 <p class="header_lft-p">My Project</p>
             </div>
     
-            <div class="flex justify-end">
+            <div class="header_grp2">
+                <span class="navbar-logo "><i class="fas fa-moon"></i></span>
                 <a href="/contact.html" class="header_left-a">Contact Me</a>
             </div>
         </div>
@@ -28,25 +30,25 @@
 
     <div class="section">
         <form class="form1">
-            <h1 class="form1_h1">GET IN TOUCH</h1>    
+            <h1 class="form1_h1 r">GET IN TOUCH</h1>    
     
             <div class="form_1-list">
-                <label class="form_1-lab">Name</label>
+                <label class="form_1-lab r">Name</label>
                 <input type="text" class="form_1-lab1" id="input-name"/>
             </div>
         
             <div class="form_1-list">
-                <label class="form_1-lab">Email</label>
+                <label class="form_1-lab r">Email</label>
                 <input type="email" class="form_1-lab1" id="input-email"/>
             </div>
         
             <div class="form_1-list">
-                <label class="form_1-lab">Phone Number</label>
+                <label class="form_1-lab r">Phone Number</label>
                 <input type="text" class="form_1-lab1" id="input-number"/>
             </div>
         
             <div class="form_1-list">
-                <label class="form_1-lab">Subject</label>
+                <label class="form_1-lab r">Subject</label>
                 <select class="form_1-lab11" id="input-subject">
                     <option value="">Select.....</option>
                     <option value="frontend">Frontend Development</option>
@@ -56,15 +58,16 @@
             </div>
         
             <div class="form_1-list ">
-                <label class="form_1-msg ">Your Message</label>
+                <label class="form_1-msg r">Your Message</label>
                 <textarea class="form_1-txt" id="input-message"></textarea>
             </div>
             
             <div class="flex justify-end">
-                <button type="submit" onclick="submitData(event)">Contact Me</button>
+                <button type="submit" onclick="submitData(event)" class="bt">Contact Me</button>
             </div>
         </form>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/darkmode.js"></script>
 </body>
 </html>

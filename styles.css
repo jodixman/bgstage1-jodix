@@ -1,5 +1,14 @@
+a {
+  text-decoration: none;
+}
+
 .body1 {
   background-color: #e2e6eb;
+}
+
+.navbar-logo {
+  cursor: pointer;
+  font-size: 1.875rem;
 }
 
 .header {
@@ -17,6 +26,14 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.header_grp2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
+
 .header_lft {
   display: flex;
   flex-direction: row;
@@ -46,6 +63,7 @@
   transition-duration: 0.5s;
   color: black;
 }
+
 .header_lft-p:hover {
   color: #8b9fb2;
 }
@@ -81,6 +99,7 @@
   padding-bottom: 3.5rem;
   flex-wrap: wrap;
   display: flex;
+  justify-content: between;
   flex-direction: row;
   margin-left: auto;
   margin-right: auto;

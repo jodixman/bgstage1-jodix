@@ -48,19 +48,14 @@ function ProjectSubmit(event) {
         startDate,
         endDate,
     };
-
-    let hidElement = document.getElementById("hid");
-
-    // Add the "hid" class to the element
-    hidElement.classList.add("hid");
     
-
     projects.push(project);
+
 
     // Panggil fungsi lain atau lakukan manipulasi data lain dengan menggunakan nilai projects di sini
     processProjects();
-    console.log(endDate)
-    
+    console.log(endDate);
+
 }
 
 
@@ -217,5 +212,21 @@ const Waktu = (jodi) =>{ // jodi = new Date()
   }
   
 
+
+
   
-  
+// ============== Function Clear Button ==============
+const clearButton = document.getElementById("clear-button");
+clearButton.addEventListener("click", function () {
+  // Clear input fields
+  document.getElementById("input-porject-title").value = "";
+  document.getElementById("input-description").value = "";
+  document.getElementById("input-blog-image").value = "";
+  document.getElementById("input-project-startdate").value = "";
+  document.getElementById("input-project-enddate").value = "";
+  document.getElementById("input-node").checked = false;
+  document.getElementById("input-react").checked = false;
+  document.getElementById("input-vue").checked = false;
+  document.getElementById("input-angular").checked = false;
+  document.getElementById("selected-image").src = "";
+});

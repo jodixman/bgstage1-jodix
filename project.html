@@ -20,12 +20,12 @@
                 </div>
         
                 <div class="header_grp2">
-                    <span class="navbar-logo "><i class="fas fa-moon"></i></span>
+                    <span class="navbar-logo " id="navbar-logo"><i class="fas fa-moon"></i></span>
                     <a href="/contact.html" class="header_left-a">Contact Me</a>
                 </div>
             </div>
         </nav>
-        
+
         
         <!--MyProject START-->
         <div class="pro">
@@ -53,7 +53,7 @@
         
             <!--Description Start-->
             <div class="flex_col ">
-                <label for="input-description" class="pro_form_label  r">Description</label>
+                <label for="input-description" class="pro_form_label r">Description</label>
                 <textarea id="input-description" class="pro_fomr-textarea"></textarea>
             </div>
             <!--Description End-->
@@ -99,13 +99,11 @@
                     <input type="file" id="input-blog-image" hidden />
                 </div>
             </div>
-
-
-
-
             <!--Uploud End-->
             <div class="flex flex-row justify-end">
                 <button class="px-6 py-1 text-white bg-[#111626] rounded-full text-center hover:bg-white hover:text-black border border-black transition duration-500 my-5 text-lg font-bold hover:shadow-lg bt" >submit</button>
+                <button id="clear-button" type="button" class="px-6 py-1 text-white bg-[#111626] rounded-full text-center hover:bg-white hover:text-black border border-black transition duration-500 my-5 text-lg font-bold hover:shadow-lg bt">Clear</button>
+
             </div>
         </form>
         
@@ -115,10 +113,10 @@
 
     <!-- TESTER PROJECT -->
     <div class=" cr crd">
-        <h1 class="crd_h1 r">MY PROJECT</h1>
+        <h1 class="crd_h1">MY PROJECT</h1>
       
         <div class="crd_grid">
-            <div class="crd_card" id="hid">
+            <div class="crd_card"  id="hid">
                 <a href="InProject.html">
                     <div class="card_div">
                         <div class="card_div1">
@@ -136,18 +134,19 @@
             
                         <div class="card_btn1">
                             <button class="card_btn" >Edit</button>
-                            <button class="card_btn" >Delet</button>
+                            <button class="card_btn" id="delete">Delete</button>
                         </div>
                     </div>
                 </a>
             </div>
-
         </div>
 
-        <a href="InProject.html"><div class="crd_grid" id="test2"></div></a>
+        <a href="InProject.html" class="crd_grid" id="test2"></a>
+
+        
     </div>
 
-    
+        <p class="hello"></p>
 
     <script src="js/project.js"></script>
     <script src="js/darkmode.js"></script>

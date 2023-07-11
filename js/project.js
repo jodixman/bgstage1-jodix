@@ -1,5 +1,8 @@
 let projects = []; // Array untuk menyimpan proyek-proyek
 
+
+
+
 function ProjectSubmit(event) {
     event.preventDefault();
 
@@ -49,9 +52,12 @@ function ProjectSubmit(event) {
         endDate,
     };
     
+    // agar card hilang saat di click
+    let hiddenElement = document.getElementById("hid");
+    hiddenElement.style.display = "none";
+
     projects.push(project);
-
-
+    
     // Panggil fungsi lain atau lakukan manipulasi data lain dengan menggunakan nilai projects di sini
     processProjects();
     console.log(endDate);
@@ -96,20 +102,13 @@ function processProjects() {
                 <p>
                   ${hitungMundur(projectStart,projectEnd)}
                 </p>
-                <div class="card_btn1">
+                <div class="card_btn1 py-5">
                     <button class="card_btn" >Edit</button>
                     <button class="card_btn" >Delet</button>
                 </div>
             </div>
         </a>
-    </div>
-
-        `
-   
-
-        // Lakukan sesuatu dengan nilai proyek, seperti mencetaknya ke tampilan atau melakukan operasi lain
-        console.log("Project Name:", projectName);
-        console.log("Project Description:", projectDesc);
+    </div>`
     }
     
 }
@@ -124,6 +123,16 @@ startDateInput.addEventListener("change", function() {
   endDateInput.min = startDateInput.value;
 });
 
+
+
+// saat di clcik gambarnya muncul nama
+let imageInput = document.getElementById("input-blog-image");
+let text3Element = document.querySelector(".text3");
+
+imageInput.addEventListener("change", function() {
+  let imageName = imageInput.files[0].name;
+  text3Element.textContent = imageName;
+});
 
 
 
@@ -230,3 +239,11 @@ clearButton.addEventListener("click", function () {
   document.getElementById("input-angular").checked = false;
   document.getElementById("selected-image").src = "";
 });
+
+
+
+
+
+
+
+

@@ -6,6 +6,7 @@
   --text-secondary: #d1d5db;
 }
 
+.cr,
 body.dark-mode {
   background-color: var(--bg-primary);
 }
@@ -38,3 +39,7 @@ button.dark-mode:hover {
 }
 
 /* Add more CSS rules for other elements */
+
+
+
+

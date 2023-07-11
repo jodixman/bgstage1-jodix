@@ -21,3 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function saveDarkModePreference(isDarkMode) {
   localStorage.setItem('darkMode', isDarkMode);
 }
+
+
+
+

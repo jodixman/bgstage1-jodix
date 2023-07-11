@@ -7,28 +7,42 @@
     <script src="https://kit.fontawesome.com/0d0d992eb4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/darkmode.css">
     <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <title>Document</title>
 </head>
 <body class="body1 dark-mode">
 
-        <nav class="header">
-            <div class="header_grp">
-                <div class="header_lft">
-                    <image src="image/logoDmb.png" class="header_lft-img"/>
-                    <a href="index.html" class="header_lft-h1">Home</a>
-                    <a href="project.html" class="header_lft-p">My Project</a>
-                </div>
-        
-                <div class="header_grp2">
-                    <span class="navbar-logo " id="navbar-logo"><i class="fas fa-moon"></i></span>
-                    <a href="/contact.html" class="header_left-a">Contact Me</a>
-                </div>
+    <nav class="header px-5">
+        <div class="header_grp">
+            <div class="header_lft">
+                <img src="image/logoDmb.png" class="header_lft-img" alt="Logo" />
+                <a href="index.html" class="header_lft-h1 hidden md:flex">Home</a>
+                <a href="project.html" class="header_lft-p hidden md:flex">My Project</a>
             </div>
-        </nav>
+    
+            <div class="header_grp2">
+                <span class="navbar-logo "><i class="fas fa-moon"></i></span>
+                <a href="contact.html" class="header_left-a hidden md:flex">Contact Me</a>   
+                <i class="fa-solid fa-bars toggle-menu cursor-pointer text-4xl md:hidden"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!---- BURGER ----->
+    <div class="burger merah ">
+        <ul class="burger_ul ">
+            <li class="burger_li"><a href="index.html">Home</a></li>
+            <li class="burger_li"><a href="project.html">My Project</a></li>
+            <li class="burger_li"><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
 
         
         <!--MyProject START-->
-        <div class="pro">
+        <div class="pro px-5">
         <h1 class="pro_h1 r">ADD MY PROJECT</h1>
         <form class="pro_form" onsubmit="ProjectSubmit(event)">
             <div class="flex_col ">
@@ -92,8 +106,11 @@
                 <div class="">
                     <label for="input-blog-image">
                         <div class="upld_card">
-                            <p class="upld_card-p">Attach File</p>
-                            <img src="image/file.png" alt="file" />
+                            <div class="flex">
+                                <p class="upld_card-p bg-slate-300 px-5 py-5">Attach File</p>
+                                <p class="flex items-center text-3xl pl-5 text3"></p>
+                            </div>
+                            <img src="image/file.png" alt="file" class=""/>
                         </div>
                     </label>
                     <input type="file" id="input-blog-image" hidden />
@@ -115,7 +132,7 @@
     <div class=" cr crd">
         <h1 class="crd_h1">MY PROJECT</h1>
       
-        <div class="crd_grid">
+        <div class="crd_grid flex">
             <div class="crd_card"  id="hid">
                 <a href="InProject.html">
                     <div class="card_div">
@@ -141,7 +158,7 @@
             </div>
         </div>
 
-        <a href="InProject.html" class="crd_grid" id="test2"></a>
+        <a href="InProject.html" class="crd_grid card_push" id="test2"></a>
 
         
     </div>
@@ -150,5 +167,6 @@
 
     <script src="js/project.js"></script>
     <script src="js/darkmode.js"></script>
+    <script src="js/responsive.js"></script>
 </body>
 </html>

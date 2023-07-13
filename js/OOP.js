@@ -27,7 +27,7 @@ class Main {
     }
 
     get testimonialHTML() {
-        return `        <div class="crd_grid flex">
+        return `<div class="crd_grid flex">
         <div class="crd_card" id="hid">
             <a href="InProject.html">
                 <div class="card_div">
@@ -83,3 +83,5 @@ for (let i = 0; i < testimonialData.length; i++) {
 }
 
 document.getElementById("text2").innerHTML = testimonialHTML
+
+

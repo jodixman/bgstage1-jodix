@@ -24,6 +24,7 @@
                 <a href="index.html" class="header_lft-h1 hidden md:flex">Home</a>
                 <a href="project.html" class="header_lft-p hidden md:flex">My Project</a>
                 <a href="testimonials.html" class="header_lft-p hidden md:flex">Testimonal</a>
+                <a href="bootstrap/bootstrap.html" class="header_lft-p hidden md:flex text-[#7231F9] font-bold pl-10">BOOTSTRAP</a>
             </div>
     
             <div class="header_grp2">
@@ -41,6 +42,8 @@
             <li class="burger_li"><a href="project.html">My Project</a></li>
             <li class="burger_li"><a href="contact.html">Contact</a></li>
             <li class="burger_li"><a href="testimonials.html">Terimonials</a></li>
+            <li class="burger_li text-[#7231F9] font-bold "><a href="bootstrap/bootstrap.html">BOOTSTRAP</a></li>
+            
         </ul>
     </div>
 
@@ -86,7 +89,69 @@
         </div>
     </div>
 
-    <a href="InProject.html" class="crd_grid inproject1" id="text2"></a>
+    <a href="InProject.html" class="crd_grid inproject1 flex-wrap" id="text2"></a>
+
+
+
+
+
+
+  
+    
+    
+<!-- HTML -->
+
+
+<!------------------ VIDEO START ---------------->
+
+
+<!------------------ VIDEO END ---------------->
+
+
+
+
+
+<!-- ... Add more card elements as needed ... -->
+
+<script>
+    function toggleImageAndVideo(hidId, imageId, videoId) {
+        const hid = document.getElementById(hidId);
+        const image = document.getElementById(imageId);
+        const video = document.getElementById(videoId);
+
+        hid.addEventListener('mouseenter', function() {
+            image.style.display = 'none';
+            video.style.display = 'block';
+            video.play();
+        });
+
+        hid.addEventListener('mouseleave', function() {
+            video.pause();
+            video.style.display = 'none';
+            image.style.display = 'block';
+        });
+    }
+
+    // Loop through the card IDs from hid1 to hid100
+    for (let i = 1; i <= 100; i++) {
+        const hidId = `hid${i}`;
+        const imageId = `myImage${i}`;
+        const videoId = `myVideo${i}`;
+
+        toggleImageAndVideo(hidId, imageId, videoId);
+    }
+</script>
+
+    
+
+
+  <!------------------ VIDEO END ---------------->
+    
+
+    
+    
+
+    
     <!----------- PROJECT END  ------------->
     <script src="js/darkmode.js"></script>
     <script src="js/responsive.js"></script>
